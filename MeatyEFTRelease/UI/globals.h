@@ -107,6 +107,7 @@ struct radarGlobals {
     static bool getPlayerEquip;
     static bool drawPlayerEquip;
     static bool drawHandItem;
+    static bool drawRadarDistance;
     static bool getPlayerStats;
     // 0 = persistent PvP, 1 = PvP Seasonal.
     static int tarkovDevDataMode;

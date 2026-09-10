@@ -102,6 +102,7 @@ int radarGlobals::aimLineTargetMaxDistance = 1000;
 bool radarGlobals::getPlayerEquip = false;
 bool radarGlobals::drawPlayerEquip = false;
 bool radarGlobals::drawHandItem = true;
+bool radarGlobals::drawRadarDistance = true;
 bool radarGlobals::getPlayerStats = false;
 int radarGlobals::tarkovDevDataMode = 1;
 float radarGlobals::textScale = 1.0f;
