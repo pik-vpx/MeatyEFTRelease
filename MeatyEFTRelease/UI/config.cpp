@@ -402,6 +402,7 @@ void to_json(nlohmann::json& j, const radarGlobals& r) {
         {"getPlayerEquip", r.getPlayerEquip},
         {"drawPlayerEquip", r.drawPlayerEquip},
         {"drawHandItem", r.drawHandItem},
+        {"drawRadarDistance", r.drawRadarDistance},
         {"getPlayerStats", r.getPlayerStats},
         {"tarkovDevDataMode", r.tarkovDevDataMode},
         {"textScale", r.textScale},
@@ -431,6 +432,7 @@ void from_json(const nlohmann::json& j, radarGlobals& r) {
     r.getPlayerEquip = j.value("getPlayerEquip", r.getPlayerEquip);
     r.drawPlayerEquip = j.value("drawPlayerEquip", r.drawPlayerEquip);
     r.drawHandItem = j.value("drawHandItem", r.drawHandItem);
+    r.drawRadarDistance = j.value("drawRadarDistance", r.drawRadarDistance);
     r.getPlayerStats = j.value("getPlayerStats", r.getPlayerStats);
     r.tarkovDevDataMode = std::clamp(j.value("tarkovDevDataMode", r.tarkovDevDataMode), 0, 1);
     r.textScale = std::clamp(j.value("textScale", r.textScale), 0.75f, 2.0f);
