@@ -921,6 +921,20 @@ void DrawRadarPlayerMarkers(float x, float y, float zoomLevel, const Player& pla
 				hStringVal.c_str());
 		}
 
+		if (radarGlobals::drawRadarDistance && player.distance > 0)
+		{
+			const std::string distString = std::to_string(player.distance);
+			const float distFontSize = std::max(7.0f, metaFontSize * 0.85f);
+			const ImVec2 distSize = MeasureRadarText(font, distFontSize, distString.c_str());
+			DrawRadarMarkerText(
+				draw_list,
+				font,
+				distFontSize,
+				ImVec2(x + markerRadius + 5.0f, y - distSize.y - 2.0f),
+				drawColor,
+				distString.c_str());
+		}
+
 		const float textX = x + markerRadius + labelGap;
 		if (genericAiScav)
 		{
