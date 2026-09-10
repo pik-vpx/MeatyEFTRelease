@@ -500,6 +500,7 @@ static void renderMenuSettings()
                     "Player Equip", "radarPlayerEquip", &radarGlobals::drawPlayerEquip,
                     "Hand Item", "radarHandItem", &radarGlobals::drawHandItem,
                     radarGlobals::getPlayerEquip));
+                saveIfChanged(menuLayout::ToggleRow("Distance numbers", "radarDistance", &radarGlobals::drawRadarDistance));
                 saveIfChanged(menuLayout::ToggleRow("Aim view", "aimView", &aimviewConfig.enabled));
                 saveIfChanged(menuLayout::ToggleRow("Radar min view", "radarMinView", &radarGlobals::minimalView));
             }
