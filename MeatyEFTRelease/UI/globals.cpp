@@ -7,7 +7,7 @@
 
 
 //define globals
-std::string globals::appVersion = "1.0.35";
+std::string globals::appVersion = "1.0.36";
 std::string globals::latestAppVersion = "";
 bool globals::showVersionMismatchWarning = false;
 float globals::appTextScale = 1.f;
@@ -94,6 +94,11 @@ void mapGlobals::startLootFocusRipple(const glm::vec3& location)
 // gameGlobals struct
 bool gameGlobals::gameRunning = false;
 bool gameGlobals::inHideout = false;
+
+bool hideoutGlobals::gymEnabled = false;
+bool hideoutGlobals::gymAutoClick = false;
+bool hideoutGlobals::neededLootFilterEnabled = false;
+glm::vec4 hideoutGlobals::neededLootFilterColour = glm::vec4(1.0f, 0.55f, 0.15f, 1.0f);
 
 
 // appGlobals struct
