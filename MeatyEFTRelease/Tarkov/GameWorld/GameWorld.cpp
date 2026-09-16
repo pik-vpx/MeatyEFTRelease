@@ -40,6 +40,7 @@ static_assert(offsetof(LinkedListObject, previous) == UnityOffsets::LinkedList_P
 static_assert(offsetof(LinkedListObject, next) == UnityOffsets::LinkedList_NextOffset);
 static_assert(offsetof(LinkedListObject, this_object) == UnityOffsets::LinkedList_ThisObjectOffset);
 
+constexpr std::uint64_t kGameWorldSingletonClassBss = 0x6E442B8;
 constexpr std::uint64_t kIl2CppClassStaticFields = 0xB8;
 
 bool plausibleGameObjectName(const std::string& name)

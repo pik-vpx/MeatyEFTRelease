@@ -40,6 +40,12 @@ namespace
     constexpr std::uint64_t kManagedArrayData = 0x20;
 
     constexpr std::uint64_t kObjectClassMonoBehaviour = 0x10;
+    constexpr std::uint64_t kUnityObjectCachedPointer = 0x10;
+    constexpr std::uint64_t kComponentArraySize = 0x10;
+    constexpr std::uint64_t kComponentArrayEntryComponent = 0x8;
+    constexpr std::uint64_t kComponentArrayEntryStride = 0x10;
+
+    constexpr std::uint64_t kCameraManagerBss = 0x6E2D7E8;
     constexpr std::uint64_t kIl2CppClassStaticFields = 0xB8;
 
     constexpr int kMaxGameObjectComponents = 128;
