@@ -73,6 +73,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ExternalIncludePath>external;external\directx;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>libs\directx;libs;$(LibraryPath)</LibraryPath>
+    <OutDir>D:\MeatyEFTRelease-master\x64\Release\</OutDir>
+    <IntDir>D:\MeatyEFTRelease-master\x64\Release\Intermediate\</IntDir>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
