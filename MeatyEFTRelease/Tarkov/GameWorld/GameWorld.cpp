@@ -38,7 +38,7 @@ struct LinkedListObject {
 constexpr std::uint64_t kGomLastActiveNode = 0x20;
 constexpr std::uint64_t kGomActiveNodes = 0x28;
 
-constexpr std::uint64_t kGameWorldSingletonClassBss = 0x6E442B8;
+constexpr std::uint64_t kGameWorldSingletonClassBss = 0x5D71168;
 constexpr std::uint64_t kIl2CppClassStaticFields = 0xB8;
 constexpr std::uint64_t kGameWorldSingletonInstance = 0x10;
 

@@ -62,7 +62,7 @@ namespace
     constexpr std::uint64_t kComponentArrayEntryComponent = 0x8;
     constexpr std::uint64_t kComponentArrayEntryStride = 0x10;
 
-constexpr std::uint64_t kCameraManagerBss = 0x6E2D7E8;
+constexpr std::uint64_t kCameraManagerBss = 0x5A6C928;
 constexpr std::uint64_t kIl2CppClassStaticFields = 0xB8;
 
     constexpr std::uint64_t kCameraManagerInstance = 0x0;
