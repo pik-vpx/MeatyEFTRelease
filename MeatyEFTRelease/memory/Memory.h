@@ -120,6 +120,7 @@ enum class DmaHealthSource : uint8_t
     GameWorldSingleton,
     CameraChain,
     OpticMesh,
+    LocalPlayerPose,
     Count
 };
 
@@ -550,29 +551,6 @@ public:
     [[nodiscard]] uint64_t ReadChain(
         uint64_t base,
         const std::vector<uint64_t>& offsets,
-        DmaCacheMode cacheMode = DmaCacheMode::Cached
-    ) const
-    {
-        uint64_t out = 0;
-        ReadChain(base, offsets, out, cacheMode);
-        return out;
-    }
-
-    template <size_t N>
-    [[nodiscard]] bool ReadChain(
-        uint64_t base,
-        const uint64_t (&offsets)[N],
-        uint64_t& out,
-        DmaCacheMode cacheMode = DmaCacheMode::Cached
-    ) const
-    {
-        return ReadChain(base, std::vector<uint64_t>(offsets, offsets + N), out, cacheMode);
-    }
-
-    template <size_t N>
-    [[nodiscard]] uint64_t ReadChain(
-        uint64_t base,
-        const uint64_t (&offsets)[N],
         DmaCacheMode cacheMode = DmaCacheMode::Cached
     ) const
     {
