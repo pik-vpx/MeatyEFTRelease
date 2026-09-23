@@ -1520,6 +1520,7 @@ static void renderMenuSettings()
                                                                 &radarGlobals::drawHandItem, radarGlobals::getPlayerEquip));
                  saveIfChanged(menuLayout::ToggleRow("Distance numbers", "radarDistance", &radarGlobals::drawRadarDistance));
                  saveIfChanged(menuLayout::ToggleRow("Aim view", "aimView", &aimviewConfig.enabled));
+                 saveIfChanged(menuLayout::ToggleRow("Aim view crosshair", "aimViewCrosshair", &aimviewConfig.drawCrosshair));
                 saveIfChanged(menuLayout::ToggleRow("Radar min view", "radarMinView", &radarGlobals::minimalView));
             }
             if (menuLayout::Section("Radar AimLines"))
