@@ -560,6 +560,7 @@ void to_json(nlohmann::json& j, const AimViewConfig& a)
 {
     j = nlohmann::json{
         {"enabled", a.enabled},
+        {"drawCrosshair", a.drawCrosshair},
         {"zoom", a.zoom}
     };
 }
@@ -567,6 +568,7 @@ void to_json(nlohmann::json& j, const AimViewConfig& a)
 void from_json(const nlohmann::json& j, AimViewConfig& a)
 {
     a.enabled = j.value("enabled", a.enabled);
+    a.drawCrosshair = j.value("drawCrosshair", a.drawCrosshair);
     a.zoom = std::clamp(
         j.value("zoom", a.zoom),
         a.minimumZoom,
