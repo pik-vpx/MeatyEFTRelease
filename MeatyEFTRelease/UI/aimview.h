@@ -6,6 +6,7 @@ class Player;
 
 struct AimViewConfig {
     bool enabled = true;
+    bool drawCrosshair = true;
 
     float zoom = 2.5f;
     float minimumZoom = 1.0f;
@@ -29,6 +30,7 @@ private:
     void UpdateTransform(const ImVec2& sourceResolution);
 
     void DrawBackground(ImDrawList* drawList) const;
+    void DrawCrosshair(ImDrawList* drawList) const;
     void DrawPlayers(ImDrawList* drawList);
     void DrawLoot(ImDrawList* drawList);
     void DrawContainers(ImDrawList* drawList);

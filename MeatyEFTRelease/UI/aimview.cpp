@@ -152,6 +152,9 @@ void AimViewWidget::Render(const ImVec2& sourceResolution) {
 
         DrawContainers(drawList);
 
+        if (config_.drawCrosshair)
+            DrawCrosshair(drawList);
+
         drawList->PopClipRect();
     }
 
@@ -533,6 +536,37 @@ void AimViewWidget::DrawBackground(ImDrawList* drawList) const {
         0,
         1.0f
     );
+}
+
+void AimViewWidget::DrawCrosshair(ImDrawList* drawList) const {
+    if (!drawList)
+        return;
+
+    const float size = static_cast<float>(std::clamp(espGlobals::crosshairSize, 1, 20));
+    const ImU32 colour = ImGui::ColorConvertFloat4ToU32(ImVec4(
+        coloursGlobals::crosshair.r,
+        coloursGlobals::crosshair.g,
+        coloursGlobals::crosshair.b,
+        coloursGlobals::crosshair.a
+    ));
+
+    if (espGlobals::crosshairType == 1) {
+        drawList->AddLine(
+            ImVec2(canvasCentre_.x - size, canvasCentre_.y),
+            ImVec2(canvasCentre_.x + size, canvasCentre_.y),
+            colour,
+            1.0f
+        );
+        drawList->AddLine(
+            ImVec2(canvasCentre_.x, canvasCentre_.y - size),
+            ImVec2(canvasCentre_.x, canvasCentre_.y + size),
+            colour,
+            1.0f
+        );
+        return;
+    }
+
+    drawList->AddCircle(canvasCentre_, size, colour, 0, 1.0f);
 }
 
 void AimViewWidget::DrawPlayers(ImDrawList* drawList) {
