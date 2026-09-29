@@ -543,7 +543,7 @@ void AimViewWidget::DrawCrosshair(ImDrawList* drawList) const {
         return;
 
     const MarkerStyle style = appearanceManager.GetStyle(MarkerCategory::Crosshair);
-    DrawCrosshairShape(drawList, canvasCentre_, style.radar, style, coloursGlobals::crosshair);
+    DrawCrosshairShape(drawList, canvasCentre_, style.fuser, style, coloursGlobals::crosshair);
 }
 
 void AimViewWidget::DrawPlayers(ImDrawList* drawList) {
